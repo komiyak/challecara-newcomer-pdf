@@ -1,0 +1,19 @@
+{
+  "name": "challecara-newcomer-pdf",
+  "version": "0.1.0",
+  "description": "Generating PDF files for newcomers of the Challecara.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/komiyak/challecara-newcomer-pdf.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/komiyak/challecara-newcomer-pdf/issues"
+  },
+  "homepage": "https://github.com/komiyak/challecara-newcomer-pdf#readme"
+}
