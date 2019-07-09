@@ -3,3 +3,5 @@ node_modules/
 
 pdfs/*.*
 !pdfs/.keep
+service-account.json
+.env

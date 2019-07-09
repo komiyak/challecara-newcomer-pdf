@@ -28,6 +28,8 @@
     "eslint-plugin-standard": "^4.0.0"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
+    "firebase-admin": "^8.2.0",
     "pdfmake": "^0.1.57"
   }
 }
