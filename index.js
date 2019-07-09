@@ -11,11 +11,24 @@ var PdfPrinter = require('pdfmake')
 var printer = new PdfPrinter(fonts)
 var fs = require('fs')
 
+const locationName = '博多会場'
+const schoolName = 'Fukuoka College'
+const studentName = '田中 太郎'
+const qrCodeData = 'https://example.com/'
+
 var docDefinition = {
   content: [
-    'First paragraph',
-    'Another paragraph, this time a little bit longer to make sure, this line will be divided into at least two lines',
-    '日本語'
+    { image: 'images/logo_border.png', width: 260 },
+    { text: `会場: ${locationName}`, fontSize: 20 },
+    { text: `\n所属: ${schoolName}`, fontSize: 26 },
+    { text: `${studentName} さん`, fontSize: 26 },
+    '\n\nようこそチャレキャラへ！',
+    'これから半年間、よろしくお願いします！',
+    '\nお手持ちのスマホで、この用紙に記載されている QR コードを読み取ってください。',
+    'チャレキャラを始めるためのツール等のセットアップを行います。\n\n\n',
+    { qr: qrCodeData, fit: 140, alignment: 'center' },
+    '\n\n・これはあなた専用の QR コードなので、他人と共有しないでください',
+    '・セットアップ完了後は不要になりますので、破棄してください。'
   ],
   defaultStyle: {
     font: 'IpaMincho'
