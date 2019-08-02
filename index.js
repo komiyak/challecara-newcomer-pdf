@@ -52,7 +52,8 @@ const buildContentData = async () => {
         data.push({
           documentId: documentId,
           name: name,
-          schoolName: schools[school.id].name
+          schoolName: schools[school.id].name,
+          enablePrint: doc.data().enablePrint
         })
       })
     })
@@ -110,7 +111,9 @@ buildContentData().then(result => {
         { text: '', pageBreak: 'after' }
       ]
 
-      content.push(pageContent)
+      if (student.enablePrint) {
+        content.push(pageContent)
+      }
     }
 
     var docDefinition = {
